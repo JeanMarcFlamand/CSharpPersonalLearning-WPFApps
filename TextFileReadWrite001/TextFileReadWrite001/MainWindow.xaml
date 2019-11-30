@@ -1,0 +1,93 @@
+﻿<Window x:Class="TextFileReadWrite001.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextFileReadWrite001"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Background = "LightGray">
+        <Grid.RowDefinitions>
+            <RowDefinition Height = "15"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "*"/>
+            <RowDefinition Height = "15"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width = "15"/>
+            <ColumnDefinition Width = "*"/>
+            <ColumnDefinition Width = "*"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Grid.Row="1"
+               Content="Text File Read/Write Challenge"
+               Grid.Column="1"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+        <StackPanel Grid.Column = "1" Grid.Row = "2" Orientation = "Horizontal">
+            <Label Content = "First Name:"  VerticalAlignment = "Center" Width = "70"/>
+            <TextBox Name = "FirstNametxt"
+                     Text = "" 
+                     VerticalAlignment = "Center"
+                     Width = "200">
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column = "1" Grid.Row = "3" Orientation = "Horizontal">
+            <Label Content = "Last Name:"  VerticalAlignment = "Center" Width = "70"/>
+            <TextBox Name = "LastNameTxt"
+                     Text = "" 
+                     VerticalAlignment = "Center"
+                     Width = "200">
+            </TextBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column = "1" Grid.Row = "4" Orientation = "Horizontal">
+            <Label Content = "Age:"  VerticalAlignment = "Center" Width = "70"/>
+            <ListBox x:Name="AgeLst" Margin="30,15,15,15" Width="30">
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel Orientation="Vertical" />
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+            </ListBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column = "1" Grid.Row = "5" Orientation = "Horizontal">
+            <Label Content = "Is Alive:"
+                   VerticalAlignment = "Center"
+                   Width = "70"/>
+            <CheckBox Name="IsAliveCheckb"
+                      Margin="30,15,15,15"
+                      VerticalAlignment="Center">
+                
+            </CheckBox>
+        </StackPanel>
+
+        <StackPanel Grid.Column = "1" Grid.Row = "6" Orientation = "Horizontal" HorizontalAlignment="Center">
+            <Button Name="AddUserBtn"
+                    Content="Add User"
+                    HorizontalAlignment="Center"
+                    MinWidth="80" Margin="3" FontWeight="Bold" VerticalAlignment="Center" FontSize="20"></Button>
+        </StackPanel>
+        <StackPanel Grid.Column = "1" Grid.Row = "7" Orientation = "Horizontal" HorizontalAlignment="Center">
+            <Button Name="SaveListBtn"
+                    Content="Save List"
+                    HorizontalAlignment="Center"
+                    MinWidth="80"
+                    Margin="3" FontWeight="Bold" VerticalAlignment="Center" FontSize="20">
+
+            </Button>
+        </StackPanel>
+        <TextBlock Name="FileTxtB"
+                   Grid.Row="1" Grid.Column="3"
+                   Background="White"
+                   Margin="5,5,5,5" Grid.RowSpan="7"></TextBlock>
+    </Grid>
+</Window>
