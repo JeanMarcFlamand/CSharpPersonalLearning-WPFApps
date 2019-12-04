@@ -53,7 +53,7 @@ namespace TextFileReadWrite001
             int LastNameIndex;
             int AgeIndex;
             int IsAliveIndex;
-            
+
             List<UserModel> users = new List<UserModel>();
 
             var reader = new StreamReader(thepathfile);
