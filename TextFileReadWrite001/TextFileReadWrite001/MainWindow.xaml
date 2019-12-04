@@ -24,12 +24,22 @@
             <ColumnDefinition Width = "*"/>
             <ColumnDefinition Width = "*"/>
         </Grid.ColumnDefinitions>
-        
-        <Label Grid.Row="1"
+
+        <StackPanel Grid.Row="1" Grid.Column="1"
+                    Orientation="Horizontal">
+            <Label 
                Content="Text File Read/Write Challenge"
-               Grid.Column="1"
-               HorizontalAlignment="Center"
-               VerticalAlignment="Center" FontWeight="Bold" FontSize="20"/>
+               HorizontalAlignment="Left"
+               VerticalAlignment="Center" FontWeight="Bold" FontSize="12"/>
+            <Button 
+                Name="BrowseBtn"
+                Content="Browse"
+                Margin="30,0,0,0" Click="BrowseBtn_Click"/>
+            
+
+        </StackPanel>
+        
+        
         <StackPanel Grid.Column = "1" Grid.Row = "2" Orientation = "Horizontal">
             <Label Content = "First Name:"  VerticalAlignment = "Center" Width = "70"/>
             <TextBox Name = "FirstNametxt"
@@ -50,12 +60,13 @@
 
         <StackPanel Grid.Column = "1" Grid.Row = "4" Orientation = "Horizontal">
             <Label Content = "Age:"  VerticalAlignment = "Center" Width = "70"/>
-            <ListBox x:Name="AgeLst" Margin="30,15,15,15" Width="30">
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <VirtualizingStackPanel Orientation="Vertical" />
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
+            <ListBox x:Name="AgeLst" Margin="30,5,5,5"
+                     Width="60" Height="50"
+                     ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBoxItem>50</ListBoxItem>
+                <ListBoxItem>51</ListBoxItem>
+                <ListBoxItem>52</ListBoxItem>
+
             </ListBox>
         </StackPanel>
 
@@ -66,7 +77,7 @@
             <CheckBox Name="IsAliveCheckb"
                       Margin="30,15,15,15"
                       VerticalAlignment="Center">
-                
+
             </CheckBox>
         </StackPanel>
 
@@ -85,9 +96,9 @@
 
             </Button>
         </StackPanel>
-        <TextBlock Name="FileTxtB"
+        <ListBox Name="FileLstB"
                    Grid.Row="1" Grid.Column="3"
                    Background="White"
-                   Margin="5,5,5,5" Grid.RowSpan="7"></TextBlock>
+                   Margin="5,5,5,5" Grid.RowSpan="7"></ListBox>
     </Grid>
 </Window>
