@@ -1,4 +1,4 @@
-# Read CSV file Exercice
+# Read CSV File Exercice
   Ref Tim Corey weekly Challenge (https://youtu.be/huYh1jNdQOE)
 ## ToDo List
 - [x] add Browse button.
