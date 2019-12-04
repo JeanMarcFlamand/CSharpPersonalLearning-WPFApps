@@ -84,12 +84,14 @@
 
         <StackPanel Grid.Column = "1" Grid.Row = "6" Orientation = "Horizontal" HorizontalAlignment="Center">
             <Button Name="AddUserBtn"
+                    Style="{StaticResource RoundCorner}"
                     Content="Add User"
                     HorizontalAlignment="Center"
                     MinWidth="80" Margin="3" FontWeight="Bold" VerticalAlignment="Center" FontSize="20"></Button>
         </StackPanel>
         <StackPanel Grid.Column = "1" Grid.Row = "7" Orientation = "Horizontal" HorizontalAlignment="Center">
             <Button Name="SaveListBtn"
+                    Style="{StaticResource RoundCorner}"
                     Content="Save List"
                     HorizontalAlignment="Center"
                     MinWidth="80"
