@@ -33,6 +33,7 @@
                VerticalAlignment="Center" FontWeight="Bold" FontSize="12"/>
             <Button 
                 Name="BrowseBtn"
+                Style="{StaticResource RoundCorner}"
                 Content="Browse"
                 Margin="30,0,0,0" Click="BrowseBtn_Click"/>
             
